@@ -1,1 +1,17 @@
-<p>Using the p tag means everything inside it will be paragraphed</p>
+<!-- This is a comment tag -->
+<html>
+<!-- This is the HTML element which wraps around all the code inside of it, at the other end of the HTML element is the end tag, everything inbetween the start tag and the end tag is content of this HTML element.-->
+
+<head>
+    <!-- The head element is a container for metadata (just general data about the HTML document itself) this information is generally not displayed but it defines thing such as the title of the document, the character set, the styles, links, scripts and much
+    more meta information -->
+    <title> This is the title of the document</title>
+    <!-- The title element defines the title of the document in the browser tab and is required in all HTML/XHTML documents, this is also extremely important for SEO since it displayed a title for the page in search engine results.-->
+</head>
+
+<body>
+    <!-- The Body Element defines the document body which will mostly consist of the text it is going to display. This means if you were to open thi page in your browser the text below would be the only thing you were actually able to see-->
+    A very simple HTML Document
+</body>
+
+</html>
