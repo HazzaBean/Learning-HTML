@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang=en>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+<style>
+    h1 {
+        font-family: lobster, monospace;
+        font-size: 72px;
+    }
+
+    body {
+        background-color: #c2c4c2;
+    }
+
+    h2 {
+        font-family: lobster, monospace;
+        font-size: 48;
+    }
+
+    .thin-grey-border {
+        border-color: #4e4e4f;
+        border-width: 5px;
+        border-style: solid;
+    }
+
+    #Image-Caption {
+        font-family: lobster, monospace;
+        margin-top: 10px;
+    }
+
+    #navbar {
+        font-family: monospace;
+        background-color: #4e4e4f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #footer {
+        font-family: monospace;
+        font-color: #4e4e4f;
+    }
+
+    #MainPage {
+        font-family: monospace;
+        font-color: #4e4e4f;
+        font-weight: bold;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+</style>
+
+<head>
+    <title>Sun Tzu Master Tactician</title>
+</head>
+
+<body>
+    <h1 class="text-center">Sun Tzu</h1>
+    <h2 class="text-center">Master Tactcian</h2>
+    <img class="center-block img-responsive img-rounded thin-grey-border" alt="Statue of Sun Tzu in Yurihama, Tottori, in Japan" src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAlZAAAAJDQ2MjJlMDk0LWYyZDMtNGYxNC1hNWU1LTk5NWIxZjMyOGQwZg.jpg"></img>
+    <div class="caption text-center" id="Image-Caption">
+        Statue of the mythical Sun Tzu in Yurihama, Tottori, in Japan
+    </div>
+    <div class="navbar clearfix">
+        <nav class="text-center" id="navbar">
+            <button class="btn" type="button" onclick="WhoIsSunTzu()">Who is Sun Tzu? </button>
+            <button class="btn" type="button" onclick="TheArtOfWar()"> The Art Of War </button>
+            <button class="btn" type="button" onclick="SunTzuLegacy()"> Sun Tzu Legacy</button>
+            <button class="btn" type="button" onclick="Mythology()"> Mythology </button>
+        </nav>
+        <div class="text-container-fluid text-center" id="MainPage"></div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script id="Script">
+        $(document).ready(function() {});
+        $("#navbar").children().css("background", "#06337c")
+        $("#navbar").children().css("color", "white")
+
+        var textArray = [
+            'Who Is Sun Tzu? Sun Tzu was a Chinese general, military strategist, and philosopher who lived in the Spring and Autumn period of ancient China. Sun Tzu is traditionally credited as the author of The Art of War, a widely influential work of military strategy that has affected both Western and Eastern philosophy. Aside from his legacy as the author of The Art of War, Sun Tzu is revered in Chinese and the Culture of Asia as a legendary historical figure. His birth name was Sun Wu, and he was known outside of his family by his courtesy name Changqing. The name Sun Tzu by which he is best known in the West is an honorific which means "Master Sun."',
+            'The Art of War is an ancient Chinese military treatise dating from the 5th century BC. Attributed to the ancient Chinese military strategist Sun Tzu. The text is composed of 13 chapters, each of which is devoted to one aspect of warfare. It is commonly thought of as a definitive work on military strategy and tactics. It was placed at the head of Chinas Seven Military Classics upon the collections creation in 1080 by Emperor Shenzong of Song, and has long been the most influential strategy text in East Asia. It has had an influence on Eastern and Western military thinking, business tactics, legal strategy and beyond.The book was first translated into French in 1772 by the Jesuit Jean Joseph Marie Amiot and a partial translation into English was attempted by British officer Everard Ferguson Calthrop in 1905. The first annotated English translation was completed and published by Lionel Giles in 1910. Leaders such as Mao Zedong, General Vo Nguyen Giap, General Douglas MacArthur and leaders of Imperial Japan have drawn inspiration from the work.',
+            'Sun Tzus Art of War has influenced many notable figures. Sima Qian recounted that Chinas first historical emperor, Qins Shi Huangdi, considered the book invaluable in ending the time of the Warring States. In the 20th century, the Chinese Communist leader Mao Zedong partially credited his 1949 victory over Chiang Kai-shek and the Kuomintang to The Art of War. The work strongly influenced Maos writings about guerrilla warfare, which further influenced communist insurgencies around the world.The Art of War was introduced into Japan c. AD 760 and the book quickly became popular among Japanese generals. Through its later influence on Oda Nobunaga, Toyotomi Hideyoshi, and Tokugawa Ieyasu, it significantly affected the unification of Japan in the early modern era. Prior to the Meiji Restoration, mastery of its teachings was honored among the samurai and its teachings were both exhorted and exemplified by influential daimyōs and shoguns. Subsequently, it remained popular among the Imperial Japanese armed forces. The Admiral of the Fleet Tōgō Heihachirō, who led Japans forces to victory in the Russo-Japanese War, was an avid reader of Sun Tzu.Ho Chi Minh translated the work for his Vietnamese officers to study. His general Vo Nguyen Giap, the strategist behind victories over French and American forces in Vietnam, was likewise an avid student and practitioner of Sun Tzus ideas.',
+            'Beginning around the 12th century, some scholars began to doubt the historical existence of Sunzi, primarily on the grounds that he is not mentioned in the historical classic The Commentary of Zuo (Zuo zhuan 左傳), which mentions most of the notable figures from the Spring and Autumn period. The name "Sun Wu" (孫武) does not appear in any text prior to the Records of the Grand Historian, and has been suspected to be a made-up descriptive cognomen meaning "the fugitive warrior": the surname "Sun" is glossed as the related term "fugitive" (xùn 遜), while "Wu" is the ancient Chinese virtue of "martial, valiant" (wǔ 武), which corresponds to Sunzis role as the heros doppelgänger in the story of Wu Zixu. Unlike Sun Wu, Sun Bin appears to have been an actual person who was a genuine authority on military matters, and may have been the inspiration for the creation of the historical figure "Sunzi" through a form of euhemerism.'
+        ];
+
+        $('button').click(function() {
+
+            var textIndex = $(this).index();
+
+            $('.text-container-fluid').text(textArray[textIndex]);
+        });
+    </script>
+</body>
+
+<footer class="text-center" id="footer">
+    <p> <a href="https://en.wikipedia.org/wiki/Sun_Tzu" target="_blank"> Sun Tzu </a> Wiki </p>
+    <p> Written By <a href="https://www.freecodecamp.com/hazzabean" target="_blank"> Harry Waterman</a>. </p>
+</footer>
+
+</html>
