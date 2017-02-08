@@ -1,0 +1,120 @@
+        html, body {
+        height: 100%;
+        width: 100%;
+        }
+
+        body {
+        font-family: Oswald, Arial, Sans-serif;
+        }
+
+        .no-padding {
+        padding: 0;
+        }
+
+      a {
+      -webkit-transition: all 0.35s;
+      -moz-transition: all 0.35s;
+      transition: all 0.35s;
+      color: #F05F40;
+      }
+
+      a:hover, a:focus {
+      color: #eb3812;
+      }
+      header {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      min-width: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+      background-image: url("background.jpg");
+      display: block
+      }
+
+      header .header-content {
+      position: relative;
+      text-align: center;
+      padding: 270px 15px 100px;
+      width: 70%;
+      font-family: Oswald, Arial, Sans-serif;
+      font-weight: 700;
+      }
+
+      header .header-content .header-content-inner h1 {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      font-size: 30px;
+      }
+
+      header .header-content .header-content-inner hr {
+      margin: 30px auto;
+      border-color: #2551ee;
+      border-width: 3px;
+      }
+
+      header .header-content .header-content-inner p {
+      font-weight: 300;
+      color: #d1d1d1;
+      font-size: 16px;
+      margin-bottom: 40px;
+      }
+
+      #about {
+      background-color: #F05F40;
+      position: relative;
+      font-family: Oswald, Arial, Sans-serif;
+      padding: 100px 0;
+      display: block;
+      width: 140%;
+      }
+
+      #TopNav {
+      font-family: Oswald, Arial, Sans-serif;
+      }
+
+      #ServiceButton {
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 600px;
+      outline-color: black;
+      outline-width: 3px;
+      color: black;
+      font-size: 20px;
+      }
+      #services {
+        font-family: Oswald, Arial, Sans-serif;
+        position: relative;
+        padding: 100px 0;
+      }
+      #services hr {
+      border-color: #2551ee;
+      border-width: 3px;
+      max-width: 50px;
+      }
+
+      @media (min-width: 768px) {
+      #TopNav {
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.3);
+      }
+      #ViewProjectsButton {
+      background-color: #2551ee;
+      padding: 10px 20px;
+      border-radius: 300px;
+      font-size: 20px;
+      }
+      hr {
+      border-color: #2551ee;
+      border-width: 3px;
+      max-width: 50px;
+      }
+      hr.light {
+      border-color: white;
+      }
